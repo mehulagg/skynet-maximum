@@ -1,16 +1,16 @@
 {
-  "name": "skynet-notes",
+  "name": "skynet-maximum",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "build": "rm -rf out/ && rm -rf .next/ && next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "next": "10.0.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "skynet-js": "^2.4.0"
   }
 }
