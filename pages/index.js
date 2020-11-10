@@ -1,17 +1,13 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react'
 import Head from 'next/head'
-import { SkynetClient } from 'skynet-js'
+import { useSkynet } from 'lib/skynet'
 
 export default function Home() {
-  const [skynet, setSkynet] = useState(null)
+  const skynet = useSkynet()
   const [filename, setFilename] = useState(null)
   const [skylink, setSkylink] = useState(null)
   const [directLink, setDirectLink] = useState(null)
   const fileSelect = useRef()
-
-  useEffect(() => {
-    setSkynet(new SkynetClient())
-  }, [])
 
   const createMediaPage = useCallback((mainMediaFile) => {
     const pageContent = `
