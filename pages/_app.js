@@ -1,4 +1,5 @@
 import { SkynetProvider } from 'lib/skynet'
+import 'styles/index.css'
 
 function MyApp({ Component, pageProps }) {
   return (
