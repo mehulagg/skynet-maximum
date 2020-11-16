@@ -1,11 +1,14 @@
 import { SkynetProvider } from 'lib/skynet'
+import { SkyIDProvider } from 'lib/skyid'
 import 'styles/index.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <SkynetProvider>
-      <Component {...pageProps} />
-    </SkynetProvider>
+    <SkyIDProvider>
+      <SkynetProvider>
+        <Component {...pageProps} />
+      </SkynetProvider>
+    </SkyIDProvider>
   )
 }
 
